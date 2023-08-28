@@ -1,24 +1,26 @@
 // This is the start of the program
 //
 
-#include <sys/stat.h>
+#include "log_engine.h"
+//#include <sys/stat.h>
 #include <string>
 #include <iostream>
-#include <stdlib.h>
+//#include <stdlib.h>
 #include <vector>
-#include <stdio.h>
+//#include <stdio.h>
 using namespace std;
 
 const long long N = 1e8 + 5; // 数据上限
+const int N_num=1e3+5;
 // 素数推演存储
-short Prime[13] = {12, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37}; // 打表，init
+//short Prime[13] = {12, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37}; // 打表，init
 // 注意，该数组只用于创建时的
-long long MaxInCal = 40;                                                                                                                       // 当前最大值
+long long MaxInCal = 0;                                                                                                                       // 当前最大值
 bool isPrime[N] = {0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0}; // 打表，init，运算
 vector<long long> primes;                                                                                                                      // 素数运行，关闭时存储
 //int mPF[N] = {0, 0, 0, 0, 2, 0, 2, 0, 2, 3, 2, 0, 2, 0, 2, 3, 2, 0, 2, 0, 2, 3, 2, 0, 2, 5, 2, 3, 2, 0, 2, 0, 2, 3, 2, 5, 2, 0, 2, 3, 2};      // 最小质因数->欧拉筛法，关闭后存储
 
-
+/*
 void simple_init()
 {
     
@@ -75,7 +77,7 @@ int init()
             /*for (int i = 1; i <= MaxInCal; i++)
             {
                 cin >> mPF[i];
-            }*/
+            }
             fclose(stdin); // linux下输入保存数据
             return 0;
             break;
@@ -126,7 +128,7 @@ int init()
             /*for (int i = 1; i <= MaxInCal; i++)
             {
                 cout << mPF[i] << ' ';
-            }*/
+            }
             fclose(stdout); // linux下data.txt初始化
             break;
         }
@@ -190,11 +192,11 @@ int save()
                     {
                         cout << isPrime[i];
                     }
-                    /*cout << endl;
+                    cout << endl;
                     for (int i = 1; i <= MaxInCal; i++)
                     {
                         cout << mPF[i];
-                    }*/
+                    }
                     fclose(stdout); // linux下输入保存数据
                     return 0;
                 }
@@ -225,3 +227,4 @@ int save()
     }
     return 0;
 }
+*/
